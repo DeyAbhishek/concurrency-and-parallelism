@@ -1,0 +1,43 @@
+SINGLE THREADED SERVER
+8090,false,false
+
+MULTI THREADED SERVER
+8090,true,false
+
+THREAD POOLED MULTI THREADED SERVER
+8090,true,true,cachedThreadPool
+8090,true,true,fixedThreadPool,4
+8090,true,true,scheduledThreadPool,1000
+8090,true,true,singleThreadPool
+
+#########################################################
+
+REQUEST(XML PARSE)/DATA IN REQUEST
+true,xmlparsing
+Bank,Bank,Name,Amt
+<Bank>
+<Account type="saving">
+<Id>1001</Id>
+<Type>saving</Type>
+<Name>Jack Robinson</Name>
+<Amt>10000</Amt>
+</Account>
+<Account type="current">
+<Id>1002</Id>
+<Type>current</Type>
+<Name>Sony Corporation</Name>
+<Amt>1000000</Amt>
+</Account>
+</Bank>
+
+REQUEST(DELIMITED VARIABLE FORMAT PARSE)/DATA IN REQUEST
+true,variableformatparsing
+\t,1,2
+28378327.1075840036940.JavaMail.evans@thyme	Fri, 30 Nov 2001 12:09:39 -0800 (PST)	estrickland@mieco.com	mswerzb@enron.com		couple things	Mike,  Hope everything is going as well as could be expected.  First, I wanted to ask you for a favor in that we are basically short to you 175 mw of cal 02 cob light and and 100 mw of 03 cob light.  Cob is such a thin market and I was hoping you might be able to help us out on counterparties who might have offsetting positions I could bookout with.  Second, we are going to be looking to expand at the beginnning of 02, our credit is good with just about everyone now, and we will be looking to hire one or two experienced people to trade the west, especially one long term guy.  We're obviously not as big as some shops but we have a very aggressive bonus payout.  Anyway, something to keep in mind once things get more settled up there for you guys.  Thanks to you and Bob for the help yesterday booking some of this stuff out.   Eric Strickland Mieco, Inc. 562 951-1795
+1752967.1075840036795.JavaMail.evans@thyme	Sun, 2 Dec 2001 19:45:26 -0800 (PST)	chairman.ken@enron.com	dl-ga-all_enron_worldwide2@enron.com		Enron Files Chapter 11 Reorganization	To All Employees:  This morning Enron took a series of actions designed to stabilize our situation and preserve the value in our businesses:  -- We filed voluntary petitions for relief under Chapter 11 of the U.S. Bankruptcy Code. Contrary to popular belief, this does not mean we are out of business. What it does mean is that we have entered into a court-supervised process by which we can continue to operate most of our businesses, reorganize our finances, and explore various strategic, operational and financial alternatives, including the sale of non-core assets, in an orderly manner.   -- In connection with our filing for Chapter 11 reorganization, Enron is in active discussions with leading financial institutions for debtor-in-possession (DIP) financing and expects to complete these discussions shortly. Upon the completion and court approval of these arrangements, the new funding will be available immediately on an interim basis to supplement Enron's existing capital and help the Company fulfill obligations associated with operating its business, including its employee payroll and payments to vendors for goods and services provided on or after today's filing.  -- We filed a lawsuit against Dynegy, alleging breach of contract and other causes of action for Dynegy's wrongful termination of our proposed merger. We are asking the court for damages of not less than $10 billion.  -- We also announced this morning that we are in active discussions with various leading financial institutions about providing financial support to recapitalize and revitalize the company's wholesale energy trading operations under a new ownership structure. As contemplated, this recapitalized entity will be staffed with people from Enron's current wholesale energy trading team, and will conduct counterparty transactions through EnronOnline.  These are the first steps in a strategic restructuring process that will allow Enron to meet its obligations to its creditors and preserve the value in our core wholesale energy trading business. From an operational standpoint, our energy businesses - including our pipelines, utilities and other energy assets - are conducting safe and normal operations around the world, and will continue to do so.  As you know, the second and unavoidable part of our restructuring is to improve our financial position by implementing a comprehensive cost-savings program. This will entail a significant reduction in our work force. This is painful for all of us and our goal is for as many of you as is possible to know where you stand by the end of the day Tuesday, though in some cases notification will take longer.  For our friends and colleagues who will lose their jobs as part of this process, you will remain on the company payroll for now. In addition, we will submit a severance pay plan to the Bankruptcy Court for approval. This approval must be received before we can begin paying severance benefits. We will be providing more information about this plan as soon as the Court has made its determination.  I know these actions raise new questions about our company's future and what this means for each of us. Your business unit leader will be holding floor meetings on Monday to discuss these events with you. In addition, you can access a copy of the press release on  <http://home.enron.com/>. We will also have a Q&A and other materials for you on Monday. While there is a great deal we simply don't know yet, we hope these materials will help answer at least some of your questions.  When decisions are made affecting our company, people, and operations, we will let you know as quickly as possible. There is still considerable value and opportunity in our business. The strategic restructuring process that we are beginning will allow us to preserve that value and those opportunities.  On behalf of the Board and entire management team, we greatly appreciate your patience, your professionalism and whatever support you can offer each other as we navigate through these tough times to a better future.  Ken
+
+REQUEST(DELIMITED VARIABLE FORMAT PARSE)/DATA NOT IN REQUEST
+false,variableformatparsing
+\t,1,2
+c:\\CPinput.tab
+c:\\CPoutput.tab
