@@ -1,4 +1,4 @@
-package businesslogic.impl;
+package businesslogic;
 
 import java.io.StringReader;
 import java.util.ArrayList;
