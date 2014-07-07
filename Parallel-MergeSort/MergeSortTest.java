@@ -184,3 +184,49 @@ public class MergeSortTest {
 	}
 
 }
+
+
+
+
+/*
+IF INSTEAD OF CREATING TWO THREAD, WE CREATE ONE THREAD AND USE THE MAIN THREAD IN THE PLACE OF THE ANOTHER, THE CODE WILL LOOK 
+LIKE THIS :
+
+//..
+ 	public static void parallelMergeSort(final long[] input, final int start,
+			int end, final long scratch[], final int arg) {
+		int size = end - start;
+		if (size < 2)
+			return;
+		if (arg < 2){
+			seqMergeSort(input, start, end, scratch);
+			return;
+		}
+		
+		final int pivot = (end - start) / 2 + start;
+		
+		Runnable left = new Runnable() {
+			@Override
+			public void run() {
+				parallelMergeSort(input, start, pivot, scratch, arg - arg/2);
+			}
+		};
+		
+		Thread lt = new Thread(left);
+		lt.start();
+		
+		parallelMergeSort(input, pivot, end, scratch, arg/2);
+		
+		try {
+			lt.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+			System.exit(-1);
+		}
+		
+		System.arraycopy(input, start, scratch, start, size);
+		merge(scratch, input, start, pivot, end);
+	}
+ 
+//...
+*/
