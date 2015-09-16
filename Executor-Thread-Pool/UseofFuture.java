@@ -1,6 +1,5 @@
 // Link to compiled code: http://goo.gl/ka7n4s
 // Acknowledgement: This is an example I found at: http://www.journaldev.com/1090/java-callable-future-example
-
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -9,6 +8,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
  
 public class HelloWorld implements Callable<String> {
  
@@ -41,7 +41,17 @@ public class HelloWorld implements Callable<String> {
                 e.printStackTrace();
             }
         }
-        //shut down the executor service now
-        executor.shutdown();
+        
+        try{
+            // waits for termination for 30 seconds only
+            executor.awaitTermination(30,TimeUnit.SECONDS);
+        }
+        catch(InterruptedException ex){
+         
+        }
+        finally
+        {
+            executor.shutdown();
     }
+}
 }
