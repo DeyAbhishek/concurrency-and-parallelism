@@ -1,4 +1,8 @@
 /*
+This is just a sample program. Source:
+https://courses.cs.washington.edu/courses/cse373/13wi/lectures/03-13/MergeSort.java
+*/
+/*
 This program measures the runtime of the merge sort algorithm,
 in both a standard sequential version and a parallel version
 that uses multiple threads.
