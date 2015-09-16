@@ -1,8 +1,8 @@
 // Please see 1MergeSort.java for complete sample code //
 	
 	public static void parallelMergeSort(int[] a) {
-		// int cores = Runtime.getRuntime().availableProcessors();
-		int cores = 8;
+		 int cores = Runtime.getRuntime().availableProcessors();
+		//  int cores = 8;
 		parallelMergeSort(a, cores);
 	}
 	
