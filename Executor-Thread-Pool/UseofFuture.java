@@ -41,17 +41,16 @@ public class HelloWorld implements Callable<String> {
                 e.printStackTrace();
             }
         }
+
+            executor.shutdown();  //call shutdown before awaitTermination. otherwise you may wait
+                                  // unnecessary for 30 seconds in some cases even when not needed to wait and 
+                                  //all threads have terminated already
+    
         
         try{
             // waits for termination for 30 seconds only
             executor.awaitTermination(30,TimeUnit.SECONDS);
-        }
-        catch(InterruptedException ex){
-         
-        }
-        finally
-        {
-            executor.shutdown();
-    }
+        }catch(InterruptedException ex){}
+        
 }
 }
