@@ -1,6 +1,6 @@
 // Link to compiled code: http://goo.gl/SXurhO
 // Link to compiled code: http://www.tutorialspoint.com/compile_java_online.php?PID=0Bw_CjBb95KQMX3pYM2xNeWx5OUk
-// Acknowledgement: This is an example I found at: http://www.journaldev.com/1090/java-callable-future-example
+// Reference: http://www.journaldev.com/1090/java-callable-future-example
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
